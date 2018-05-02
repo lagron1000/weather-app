@@ -1,0 +1,21 @@
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+.flex h1{
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.flex .cityInput{
+    width: 60%
+}
+
+.flex .commentsSec{
+    text-align: left; 
+}
+
+.flex .commentInput{
+    width: 115%;
+}

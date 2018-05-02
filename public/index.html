@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="bootstrap\dist\css\bootstrap.min.css">
+  <link rel="stylesheet" href="font-awesome\css\font-awesome.min.css">
+  </head>
+  <body>
+      <div class="flex">
+          <h1>Weather Chat</h1>
+          <input class="cityInput" type="text" placeholder="City name"/>
+          <button class="btn btn-primary submitCity" type="button">Submit</button>
+      </div>
+      
+      <div class="posts flex">
+            <ul class="commentsList">
+
+            </ul>
+      </div>
+
+      <script id="posts-template" type="text/x-handlebars-template">
+
+     <li class="postLi">
+         <h3>{{name}}</h3>
+            <p>{{main.temp}} degrees Kelvin</p>
+            <section class="commentsSec">
+                <div class="comments"></div>
+                <form class="commentsForm">
+                <input class="commentInput" type="text" placeholder="comment about the weather in {{name}}"/>
+                <button type="button" class="btn btn-primary submitComment">Submit</button>
+                </form>
+            </section>
+          </li>
+
+      </script>
+
+    <script type="module" src="main.js"></script>
+    <script src="handlebars\dist\handlebars.min.js"></script>
+    <script src="jquery\dist\jquery.min.js"></script>
+  </body>
+</html>
