@@ -23,12 +23,12 @@
       <script id="posts-template" type="text/x-handlebars-template">
 
      <li class="postLi">
-         <h3>{{name}}</h3>
-            <p><strong>{{main.temp}}° </strong>Kelvin</p>
+         <h3>{{city}}</h3>
+            <p><strong>{{temp}}° </strong>Kelvin</p>
             <section class="commentsSec">
                 <div class="comments"></div>
                 <form class="commentsForm">
-                <input class="commentInput" type="text" placeholder="comment about the weather in {{name}}"/> <br> <br>
+                <input class="commentInput" type="text" placeholder="comment about the weather in {{city}}"/> <br> <br>
                 <button type="button" class="btn btn-primary submitComment">Submit</button>
                 </form>
             </section>

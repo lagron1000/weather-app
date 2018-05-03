@@ -1,6 +1,6 @@
 import { newPost } from './class.js'
 
-var postsArray = [];
+
 var postPost = function(cityName){
     var source = $('#posts-template').html();
     var template = Handlebars.compile(source);
@@ -30,7 +30,7 @@ var postPost = function(cityName){
 // })
 // }
 
-export {postsArray}
+
 export {postPost}
 
 
