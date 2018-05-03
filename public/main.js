@@ -1,8 +1,10 @@
-import { fetch } from './weather.js';
+import { postPost } from './weather.js';
 import { addComment } from './comments.js'
+import { newPost } from './class.js'
 
 $(".submitCity").on('click', function(){
-fetch();
+    var cityName = $(".cityInput").val();
+postPost(cityName);
 })
 
 $('.posts').on('click', '.submitComment', function(){

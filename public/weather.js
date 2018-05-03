@@ -1,21 +1,37 @@
-var fetch = function(){
-var cityName = $(".cityInput").val();
+import { newPost } from './class.js'
 
-$.ajax({method:"GET", url: "http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=d703871f861842b79c60988ccf3b17ec"})
-.then(function(data){
-    console.log(data)
-    // $(".posts").empty();
+var postsArray = [];
+var postPost = function(cityName){
     var source = $('#posts-template').html();
     var template = Handlebars.compile(source);
-    var newHTML = template(data);
+    var newHTML = template(newPost(cityName));
     $('.commentsList').append(newHTML);
-}).catch(function(data){
-    console.log(data)
-})
 }
 
 
-export {fetch}
+
+
+
+
+
+// var fetch = function(){
+// var cityName = $(".cityInput").val();
+
+// $.ajax({method:"GET", url: "http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=d703871f861842b79c60988ccf3b17ec"})
+// .then(function(data){
+//     console.log(data)
+//     // $(".posts").empty();
+//     var source = $('#posts-template').html();
+//     var template = Handlebars.compile(source);
+//     var newHTML = template(data);
+//     $('.commentsList').append(newHTML);
+// }).catch(function(data){
+//     console.log(data)
+// })
+// }
+
+export {postsArray}
+export {postPost}
 
 
 
