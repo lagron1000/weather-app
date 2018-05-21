@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 20px;
+    margin-top: 2%;
 }
 .flex h1{
     text-align: left;
@@ -18,4 +19,8 @@
 
 .flex .commentInput{
     width: 115%;
+}
+
+.postLi{
+    padding-top: 10%;
 }

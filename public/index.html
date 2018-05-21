@@ -16,24 +16,27 @@
       
       <div class="posts flex">
             <ul class="commentsList">
-
             </ul>
       </div>
 
       <script id="posts-template" type="text/x-handlebars-template">
-
+        {{#each arr}}
      <li class="postLi">
+
          <h3>{{name}}</h3>
-            <p>{{main.temp}} degrees Kelvin</p>
+            <p><strong>{{temp}}° </strong>Celsius</p>
             <section class="commentsSec">
                 <div class="comments"></div>
                 <form class="commentsForm">
-                <input class="commentInput" type="text" placeholder="comment about the weather in {{name}}"/>
-                <button type="button" class="btn btn-primary submitComment">Submit</button>
+                    {{#each comments}}
+                    <li>{{text}}</li>
+                      {{/each}}
+                <input class="commentInput" type="text" placeholder="comment about the weather in {{name}}"/> <br> <br>
+                <button type="button" class="btn btn-success submitComment">Submit</button>
                 </form>
             </section>
           </li>
-
+          {{/each}}
       </script>
 
     <script type="module" src="main.js"></script>
